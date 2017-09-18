@@ -48,3 +48,9 @@ new Vue({
   // components: { App }
   render: h => h(App)
 })
+
+// 保持登录状态
+const user = api.SDK.User.current()
+if (user) {
+  store.commit('setUser', user)
+}
