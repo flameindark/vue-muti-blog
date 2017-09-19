@@ -80,7 +80,7 @@ export default {
           user.setEmail(this.user.email);
 
           user.signUp().then((loginUser) => {
-            this.$store.diapatch('login', loginUser); // 保存到 Vuex 中
+            this.$store.dispatch('login', loginUser); // 保存到 Vuex 中
             this.$router.go(-1) // 回到上一页
             this.$message.success("注册成功！")
           }).catch(error => {
